@@ -45,15 +45,15 @@ class MessengerServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../../config/messenger.php', 'messenger');
-        $this->mergeConfigFrom(__DIR__.'/../../config/services.php', 'services');
+        $this->mergeConfigFrom(__DIR__.'/../config/messenger.php', 'messenger');
+        $this->mergeConfigFrom(__DIR__.'/../config/services.php', 'services');
     }
 
     protected function bootForConsole(): void
     {
         $this->publishes(
             [
-                __DIR__.'/../../config/messenger.php' => config_path('messenger.php'),
+                __DIR__.'/../config/messenger.php' => config_path('messenger.php'),
             ],
             'messenger.config'
         );
