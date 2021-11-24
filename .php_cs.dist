@@ -1,0 +1,10 @@
+<?php
+
+$finder = \PhpCsFixer\Finder::create()
+    ->name('*.php')
+    ->files()
+    ->in(__DIR__)
+    ->ignoreDotFiles(true)
+    ->ignoreVCS(true);
+
+return new \Braip\WayPhp\PhpCsFixer\Config($finder);
