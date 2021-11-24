@@ -1,7 +1,7 @@
 {
     "name": "braiphub/messenger-laravel",
     "description": "Implementação Laravel do Messenger",
-    "version": "1.2",
+    "version": "1.2.1",
     "homepage": "https://github.com/braiphub/messenger-laravel",
     "keywords": ["Laravel", "Messenger"],
     "config": {
