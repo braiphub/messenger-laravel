@@ -40,6 +40,9 @@
             "providers": [
                 "Braip\\Messenger\\MessengerServiceProvider"
             ]
+        },
+        "grumphp": {
+            "config-default-path": "vendor/braiphub/php-standards/grumphp.yml"
         }
     }
 }
