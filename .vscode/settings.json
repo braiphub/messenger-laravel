@@ -1,0 +1,4 @@
+{
+    "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+    "better-phpunit.commandSuffix": "--no-logging"
+}
