@@ -18,5 +18,9 @@ class ConsumeMessage
     public function handle(JobProcessing $event)
     {
         $this->consumer->consume($event->job);
+
+        if ($event->job->isDeleted()) {
+            return false;
+        }
     }
 }

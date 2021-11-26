@@ -6,6 +6,7 @@ use Braip\Messenger\Commands\WorkCommand;
 use Braip\Messenger\Listeners\ConsumeMessage;
 use Braip\Messenger\Listeners\PublishMessage;
 use Illuminate\Queue\Events\JobProcessing;
+use Illuminate\Queue\Worker;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Ramsey\Uuid\Uuid;
@@ -41,6 +42,13 @@ class MessengerServiceProvider extends ServiceProvider
                 $config['messenger.publisher.topic']
             );
         });
+
+        $this->app
+            ->when(WorkCommand::class)
+            ->needs(Worker::class)
+            ->give(function ($app) {
+                return $app['queue.worker'];
+            });
     }
 
     public function register(): void

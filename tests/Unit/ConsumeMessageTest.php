@@ -29,6 +29,10 @@ class ConsumeMessageTest extends TestCase
             ->withArgs([$job])
             ->once();
 
+        $job->shouldReceive('isDeleted')
+            ->andReturn(true)
+            ->once();
+
         $listener = new ConsumeMessage($consumer);
         $listener->handle($event);
     }
