@@ -9,6 +9,19 @@ $ composer require braiphub/messenger-laravel
 $ php artisan vendor:publish --tag=messenger.config
 ```
 
+Para instalação compatível com **Composer 1**, forçar a busca no repositório do GitHub em `composer.json`:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/braiphub/messenger-laravel"
+        }
+    ]
+}
+```
+
 ## Como usar
 
 ### Enviar Mensagem
