@@ -68,3 +68,6 @@ class ListenerExemplo
     }
 }
 ```
+
+Utilize o comando `php artisan messenger:work` para conectar a fila(SQS) e buscar as mensagens para processar.
+Em produção você pode utilizar o [Supervisor](http://supervisord.org/) para agendar execução.([Material de apoio para configuração](https://www.vivaolinux.com.br/dica/Gerenciando-servicos-com-o-Supervisor))
