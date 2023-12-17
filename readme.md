@@ -46,7 +46,7 @@ event(new EventoTesteEnviado());
 
 ### Receber Mensagem
 
-Colocar no EventServiceProvider o evento desejado com o prefixo `Messenger:`. O listener vai receber um objeto do tipo `Braip\Messenger\Events\MessageReceived` como evento.
+Colocar no EventServiceProvider o evento desejado com o prefixo `Messenger:` O listener vai receber um objeto do tipo `Braip\Messenger\Events\MessageReceived` como evento.
 
 ```php
 //EventServiceProvider.php
